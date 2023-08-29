@@ -3,11 +3,11 @@ const Traveler = require('./Traveler')
 const Trip = require('./Trip')
 
 Traveler.belongsToMany(Location, {
-    through: 'Trips',
+    through: 'TravelerLocations',
     uniqueKey: false
 })
 Location.belongsToMany(Traveler, {
-    through: 'Trips',
+    through: 'TravelerLocations',
     uniqueKey: false
 })
 
